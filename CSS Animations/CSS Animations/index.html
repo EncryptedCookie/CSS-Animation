@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animations</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        // Show an element
+        var show = function (elem) {
+            elem.classList.add('is-visible');
+        };
+
+        // Hide an element
+        var hide = function (elem) {
+            elem.classList.remove('is-visible');
+        };
+
+        // Toggle element visibility
+        var toggle = function (elem) {
+            elem.classList.toggle('is-visible');
+        };
+
+        // Listen for click events
+        document.addEventListener('click', function (event) {
+
+            // Make sure clicked element is our toggle
+            if (!event.target.classList.contains('toggle')) return;
+
+            // Prevent default link behavior
+            event.preventDefault();
+
+            // Get the content
+            var content = document.querySelector(event.target.hash);
+            if (!content) return;
+
+            // Toggle the content
+            toggle(content);
+
+        }, false);
+    </script>
+</head>
+<body>
+    <h2>Pure CSS Animations</h2>
+    <p>Hover to animate!</p>
+    <div class="border">
+        <div class="animation"></div>
+    </div>
+    <a class="toggle" href="#example">Click to show the CSS</a>
+    <div class="code" id="example">/* Toggle CSS Code thing from https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/ */<br>
+        .animation {<br>
+        height: 100px;<br>
+        width: 100px;<br>
+        border: 5px solid hsl(356, 100%, 70%);<br>
+        border-radius: 50%;<br>
+        margin: 50px 100px;<br>
+        vertical-align: 50%;<br>
+        /* Animation */<br>
+        -webkit-animation-name: animation; /* Safari 4.0 - 8.0 */<br>
+        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */<br>
+        animation-name: animation;<br>
+        animation-duration: 3s;<br>
+        animation-iteration-count: infinite;<br>
+        animation-direction: alternate;<br>
+        animation-timing-function: ease-in-out;<br>
+        animation-play-state: paused;<br>
+        transition: border-bottom-color 3s linear;<br>
+        }<br>
+        <br>
+        .animation:hover {<br>
+        animation-play-state: running;<br>
+        }<br>
+        <br>
+        /* Safari 4.0 - 8.0 */<br>
+        @-webkit-keyframes animation {<br>
+        0%   {background-color: red; border-radius: 50%; transform: scale(1); border: 5px solid hsl(356, 100%, 70%);}<br>
+        25%  {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}<br>
+        50%  {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}<br>
+        100% {background-color: red; border-radius: 10%; transform: scale(1.5); border: 5px solid hsl(356, 100%, 70%);}<br>
+        }<br>
+        <br>
+        /* Standard syntax */<br>
+        @keyframes animation {<br>
+        0%   {background-color: red; border-radius: 50%; transform: scale(1); border: 5px solid hsl(356, 100%, 70%);}<br>
+        25%  {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}<br>
+        50%  {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}<br>
+        100% {background-color: red; border-radius: 10%; transform: scale(1.5) rotate(180deg); border: 5px solid hsl(356, 100%, 70%);}<br>
+        }</div>
+</body>
+</html>
