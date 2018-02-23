@@ -1,22 +1,22 @@
 /* Toggle CSS Code thing from https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/ */
 @font-face {
     font-family: "Source Sans Pro - Regular";
-    src: url(../fonts/SourceSansPro-Regular.ttf) format("truetype");
+    src: url(./fonts/SourceSansPro-Regular.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Alphabetized Cassette Tapes";
-    src: url(../fonts/Alphabetized-Cassette-Tapes.ttf) format("truetype");
+    src: url(./fonts/Alphabetized-Cassette-Tapes.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Open-Sans-Condensed-Light";
-    src: url(../fonts/OpenSansCondensed-Light.ttf) format("truetype");
+    src: url(./fonts/OpenSansCondensed-Light.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Courier New - Regular";
-    src: url(../fonts/Courier-New-Regular.ttf) format("truetype");
+    src: url(./fonts/Courier-New-Regular.ttf) format("truetype");
 }
 
 html {
