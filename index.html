@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Toggle CSS Code thing from https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,9 +42,13 @@
 </head>
 <body>
     <h2>Pure CSS Animations</h2>
-    <p>Hover to animate!</p>
-    <div class="border">
-        <div class="animation"></div>
+    <p>Hover to animate!<i class="arrow-down"></i></p>
+    <div class="animations">
+        <i class="arrow-left"></i>
+        <div class="border">
+            <div class="animation-default"></div>
+        </div>
+        <i class="arrow-right"></i>
     </div>
     <a class="toggle" href="#example">Click to show the CSS</a>
     <div class="code" id="example">/* Toggle CSS Code thing from https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/ */<br>

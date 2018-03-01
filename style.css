@@ -25,22 +25,117 @@ html {
 
 h2 {
     font-family: "Source Sans Pro - Regular", sans-serif;
-    font-size: 56px;
+    font-size: 60px;
     text-align: center;
 }
 
 p {
     font-family: 'Alphabetized Cassette Tapes', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
     margin: 10px;
 }
+
+.animations {
+    display: flex;
+    flex-direction: row;
+    width: 386px;
+    margin: auto;
+}
+
+i {
+    height: 0;
+    width: 0;
+    display: inline-block;
+}
+
+i:hover{
+    animation-play-state: running;
+}
+
+.arrow-down {
+    margin: 0 5px;
+    border: 6px solid transparent;
+    border-top-color: #000000;
+    /* Moving up and down animation */
+    -webkit-animation-name: arrowMove-down; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: arrowMove-down;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes arrowMove-down {
+    100% {transform: translateY(3px);}
+}
+
+@keyframes arrowMove-down {
+    100% {transform: translateY(3px);}
+}
+
+.arrow-left {
+    margin: 93px 20px 93px 0;
+    border: 10px solid transparent;
+    border-right-color: #000000;
+    /* Moving up and down animation */
+    -webkit-animation-name: arrowMove-left; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: arrowMove-left;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes arrowMove-left {
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(-7px);}
+}
+
+@keyframes arrowMove-left {
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(-7px);}
+}
+
+.arrow-right {
+    margin: 93px 0 93px 20px;
+    border: 10px solid transparent;
+    border-left-color: #000000;
+    /* Moving up and down animation */
+    -webkit-animation-name: arrowMove-right; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: arrowMove-right;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes arrowMove-right {
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(7px);}
+}
+
+@keyframes arrowMove-right {
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(7px);}
+}
+
 .toggle {
     font-family: "Open-Sans-Condensed-Light", sans-serif;
     font-size: 24px;
     display: block;
     text-align: center;
-    margin: 50px 0px;
+    margin: 50px 0;
     text-decoration: none;
     color: #000000;
 }
@@ -66,17 +161,17 @@ p {
 .border {
     height: 200px;
     width: 300px;
-    margin: auto;
     border: 3px solid #000000;
     border-radius: 7px;
 }
 
-.animation {
+.animation-default {
     height: 100px;
     width: 100px;
     border: 5px solid hsl(356, 100%, 70%);
     border-radius: 50%;
     margin: 50px 100px;
+    display: inline-block;
     vertical-align: 50%;
     /* Animation */
     -webkit-animation-name: animation; /* Safari 4.0 - 8.0 */
@@ -90,16 +185,16 @@ p {
     transition: border-bottom-color 3s linear;
 }
 
-.animation:hover {
+.animation-default:hover {
     animation-play-state: running;
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes animation {
     0%   {background-color: red; border-radius: 50%; transform: scale(1); border: 5px solid hsl(356, 100%, 70%);}
-    25%  {background-color: yellow; border: 5px solid hsl(61, 100%, 75%);}
+    25%  {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}
     50%  {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}
-    100% {background-color: red; border-radius: 10%; transform: scale(1.5); border: 5px solid hsl(356, 100%, 70%);}
+    100% {background-color: red; border-radius: 10%; transform: scale(1.5) rotate(180deg); border: 5px solid hsl(356, 100%, 70%);}
 }
 
 /* Standard syntax */
