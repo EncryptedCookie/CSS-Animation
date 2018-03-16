@@ -23,6 +23,14 @@ html {
     overflow-y: scroll;
 }
 
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    margin-bottom: -24px;
+}
+
 h2 {
     font-family: "Source Sans Pro - Regular", sans-serif;
     font-size: 60px;
@@ -140,17 +148,25 @@ i:hover{
     color: #000000;
 }
 
+.cssComment {
+    color: #808080;
+    font-family: "Courier New - Regular", serif;
+    font-size: 18px;
+    text-align: left;
+    margin: auto auto 10px;
+    overflow-wrap: break-word;
+}
+
 .code {
     display: none;
     font-family: "Courier New - Regular", serif;
     font-size: 18px;
-    color: #525252;
+    color: #2c2c2c;
     border: 1px solid;
     padding: 10px;
-    height: 40%;
     width: 50%;
     text-align: left;
-    margin: auto;
+    margin: auto auto 10px;
     overflow-wrap: break-word;
 }
 
@@ -203,4 +219,15 @@ i:hover{
     25%  {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}
     50%  {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}
     100% {background-color: red; border-radius: 10%; transform: scale(1.5) rotate(180deg); border: 5px solid hsl(356, 100%, 70%);}
+}
+
+.source-code {
+    color: #9b9b9b;
+    font-family: "Open-Sans-Condensed-Light", sans-serif;
+    font-size: 18px;
+    bottom: 0;
+    margin: 10px;
+    position: fixed;
+    left: 0;
+    text-align: right;
 }
